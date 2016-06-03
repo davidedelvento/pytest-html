@@ -43,6 +43,15 @@ addEventListener("DOMContentLoaded", function() {
     split_extra_onto_two_rows();
     sort_column(find('.initial-sort'));
 
+    find_all('.results-table-row').forEach(function(elem) {
+        elem.addEventListener("click",
+                              function(event) {
+                                  var to_be_hidden=elem.getAttribute('id_tbh');
+                                  var elem_tbh=document.getElementById(to_be_hidden);
+                                  elem_tbh.hidden = !elem_tbh.hidden;
+                              }, false)
+    });
+
     find_all('.col-links a.image').forEach(function(elem) {
         elem.addEventListener("click",
                               function(event) {
