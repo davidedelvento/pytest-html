@@ -169,6 +169,7 @@ function split_extra_onto_two_rows() {
             if (find("*:not(.empty)", td_elem)) {
                 new_row.appendChild(td_elem);
                 td_elem.colSpan=5;
+                new_row.id = td_elem.id;
             } else {
                 td_elem.parentNode.removeChild(td_elem);
             }

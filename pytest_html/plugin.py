@@ -157,8 +157,8 @@ class HTMLReport(object):
             html.td(test_id, class_='col-name'),
             html.td('{0:.2f}'.format(time), class_='col-duration'),
             html.td(links_html, class_='col-links'),
-            html.td(additional_html, class_='extra')],
-            class_=result.lower() + ' results-table-row'))
+            html.td(additional_html, class_='extra', id_=test_id)],
+            class_=result.lower() + ' results-table-row', id_=test_id))
 
     def append_pass(self, report):
         self.passed += 1
